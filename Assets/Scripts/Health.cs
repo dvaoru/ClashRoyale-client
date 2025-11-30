@@ -5,18 +5,26 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [field: SerializeField] public float max { get; private set; } = 10f;
+    [SerializeField] private HealthUI _healthUI;
     private float current;
 
     private void Start()
     {
         current = max;
+        UpdateUI();
     }
 
     public void ApplyDamage(float value)
     {
         current -= value;
         if (current < 0) current = 0;
-        Debug.Log("Объект " + name + "здоровье стало " + current) ;
+        UpdateUI();
+    }
+
+    private void UpdateUI()
+    {
+        if (_healthUI == false) return;
+        _healthUI.UpdateHealth(max, current);
     }
 }
 

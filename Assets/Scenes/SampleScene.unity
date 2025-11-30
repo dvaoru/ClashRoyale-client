@@ -698,6 +698,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1973430425}
   - {fileID: 321556191}
   - {fileID: 88587462}
   m_Father: {fileID: 0}
@@ -752,6 +753,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   <max>k__BackingField: 10
+  _healthUI: {fileID: 1973430424}
 --- !u!1 &321556190
 GameObject:
   m_ObjectHideFlags: 0
@@ -949,13 +951,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5955241, y: 0, z: 0, w: 0.80333745}
-  m_LocalPosition: {x: 0, y: 35.5, z: -12.6}
+  m_LocalRotation: {x: 0.5735764, y: 0, z: 0, w: 0.8191521}
+  m_LocalPosition: {x: 0, y: 35.5, z: -15.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 73.1, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 70, y: 0, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1220,6 +1222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   <max>k__BackingField: 10
+  _healthUI: {fileID: 0}
 --- !u!1 &433101276
 GameObject:
   m_ObjectHideFlags: 0
@@ -1281,6 +1284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   <max>k__BackingField: 10
+  _healthUI: {fileID: 0}
 --- !u!1 &459293078
 GameObject:
   m_ObjectHideFlags: 0
@@ -1614,6 +1618,95 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 525619387}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &530217393 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3770074595000218570, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
+  m_PrefabInstance: {fileID: 590776983}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2777e7d9ff846e448abeab1fc549551c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthUI
+--- !u!4 &530217394 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8604263029569844437, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
+  m_PrefabInstance: {fileID: 590776983}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &590776983
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1108112211}
+    m_Modifications:
+    - target: {fileID: 6106160847341462924, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
+      propertyPath: m_Name
+      value: HealthBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604263029569844437, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604263029569844437, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604263029569844437, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604263029569844437, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604263029569844437, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604263029569844437, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604263029569844437, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604263029569844437, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604263029569844437, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604263029569844437, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604263029569844437, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604263029569844437, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604263029569844437, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604263029569844437, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
 --- !u!1 &626033275
 GameObject:
   m_ObjectHideFlags: 0
@@ -2004,6 +2097,7 @@ Transform:
   m_Children:
   - {fileID: 473413728}
   - {fileID: 1536499444}
+  - {fileID: 530217394}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1108112212
@@ -2019,6 +2113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   <max>k__BackingField: 10
+  _healthUI: {fileID: 530217393}
 --- !u!1 &1247390373
 GameObject:
   m_ObjectHideFlags: 0
@@ -2182,6 +2277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   <max>k__BackingField: 10
+  _healthUI: {fileID: 0}
 --- !u!1 &1380801927
 GameObject:
   m_ObjectHideFlags: 0
@@ -2243,6 +2339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   <max>k__BackingField: 10
+  _healthUI: {fileID: 0}
 --- !u!1 &1420258575
 GameObject:
   m_ObjectHideFlags: 0
@@ -2354,6 +2451,79 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1420258575}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1436643387
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 272893358}
+    m_Modifications:
+    - target: {fileID: 6106160847341462924, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
+      propertyPath: m_Name
+      value: HealthBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604263029569844437, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604263029569844437, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604263029569844437, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604263029569844437, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604263029569844437, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604263029569844437, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604263029569844437, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604263029569844437, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604263029569844437, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604263029569844437, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604263029569844437, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604263029569844437, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604263029569844437, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604263029569844437, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
 --- !u!1 &1519568903
 GameObject:
   m_ObjectHideFlags: 0
@@ -2637,6 +2807,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   <max>k__BackingField: 10
+  _healthUI: {fileID: 0}
 --- !u!1 &1623615518
 GameObject:
   m_ObjectHideFlags: 0
@@ -2698,6 +2869,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   <max>k__BackingField: 10
+  _healthUI: {fileID: 0}
 --- !u!1 &1644894135
 GameObject:
   m_ObjectHideFlags: 0
@@ -3105,6 +3277,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1872826109}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1973430424 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3770074595000218570, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
+  m_PrefabInstance: {fileID: 1436643387}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2777e7d9ff846e448abeab1fc549551c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthUI
+--- !u!4 &1973430425 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8604263029569844437, guid: 3a984e32f84018f46b15e5412d576eb4, type: 3}
+  m_PrefabInstance: {fileID: 1436643387}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
