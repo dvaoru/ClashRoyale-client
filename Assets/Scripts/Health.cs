@@ -19,6 +19,11 @@ public class Health : MonoBehaviour
         current -= value;
         if (current < 0) current = 0;
         UpdateUI();
+        if (current == 0)
+        {
+            MapInfo.Instance.Remove(gameObject);
+            Destroy(gameObject);
+        }
     }
 
     private void UpdateUI()

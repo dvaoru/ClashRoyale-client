@@ -41,6 +41,14 @@ public class MapInfo : MonoBehaviour
         return GetNearest<Tower>(currentPosition, towers, out float distance);
     }
 
+    public void Remove(GameObject obj) 
+    {
+        if (obj.TryGetComponent<Tower>(out Tower rmTower))            
+            _enemyTowers.Remove(rmTower);
+        else if (obj.TryGetComponent<Unit>(out Unit rmUnit))
+            _enemyUnits.Remove(rmUnit);
+    }
+
     private T GetNearest<T>(in Vector3 position, List<T> objects, out float distance) where T : MonoBehaviour
     {
         distance = float.MaxValue;
