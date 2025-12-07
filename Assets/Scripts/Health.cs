@@ -1,39 +1,42 @@
+using System;
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Health))]
 
 public class Health : MonoBehaviour
 {
+    public event Action<float> UpdateHealth;
     [field: SerializeField] public float max { get; private set; } = 10f;
-    [SerializeField] private HealthUI _healthUI;
+    [SerializeField] private UnitUI _healthUI;
     private float current;
 
     private void Start()
     {
         current = max;
-        UpdateUI();
     }
 
     public void ApplyDamage(float value)
     {
         current -= value;
         if (current < 0) current = 0;
-        UpdateUI();
-        if (current == 0)
-        {
-            MapInfo.Instance.Remove(gameObject);
-            Destroy(gameObject);
-        }
+        UpdateHealth?.Invoke(current);
     }
 
-    private void UpdateUI()
+    public void ApplayDelayDamage(float delay, float damage)
     {
-        if (_healthUI == false) return;
-        _healthUI.UpdateHealth(max, current);
+        StartCoroutine(DelayDamageCoroutine(delay, damage));
     }
+
+    private IEnumerator DelayDamageCoroutine(float delay, float damage)
+    {
+        yield return new WaitForSeconds(delay);
+        ApplyDamage(damage);
+    }
+
 }
 
-interface IHealth
+public interface IHealth
 {
-    Health health {get;}
+    Health health { get; }
 }
